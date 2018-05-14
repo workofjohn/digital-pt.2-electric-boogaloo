@@ -1,0 +1,183 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+<link rel="shortcut icon" href="calmicon.png" />
+
+<script language="javascript">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  //var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+//under here is shit u need 2 automate
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+
+<title>Calm - Image Gallery</title>
+<style type="text/CSS">
+body{
+background-color:#ffffff;
+color:#0000ff;
+text-align:center;
+font-family: 'IBM Plex Mono', monospace;}
+
+.content{
+width:1050px;
+height:500px;
+background-color:#00f0f0;
+margin:auto;
+padding:20px;}
+
+.sound{
+height:50px;
+padding-top:500px;
+padding-left:525px;
+position:fixed;
+clear:both;}
+
+
+/* Slideshow container */
+.slideshow-container {
+width:1050;
+height:500px;
+ position: fixed;
+background-color:#00f0f0;
+margin-left:140px;
+padding:20px;
+overflow: hidden;
+}
+
+
+.mySlides {
+display: none;
+width:1050;
+height:500px;
+position: fixed;
+padding:20px;
+margin-left:140px;
+overflow: hidden;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+would you like to feel calm?
+<br>
+<a href="calmimages.html"><-</a>
+<br>
+
+
+  <div class="mySlides fade">
+    <img src="calm/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">  
+    <img src="calm/4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">  
+    <img src="calm/7.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">  
+    <img src="calm/10.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">  
+    <img src="calm/11.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+   <img src="calm/14.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+    <img src="calm/15.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+    <img src="calm/16.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+    <img src="calm/17.jpg" style="width:100%">
+  </div>
+
+<div class="mySlides fade">
+    <img src="calm/20.jpg" style="width:100%">
+  </div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+ <span class="dot" onclick="currentSlide(1)"></span> 
+</div>
+<br>
+
+
+
+
+</body>
+</html>
